@@ -16,3 +16,6 @@ function sendMessage() {
     conn.send(message);
     messageInput.value = '';
 }
+
+//TODO: Make it so that the user sees their own message as well
+//TODO: Make it so that users can connect or disconnect to chatrooms

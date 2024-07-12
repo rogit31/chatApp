@@ -16,7 +16,8 @@ class Chat implements MessageComponentInterface
     public function onOpen(ConnectionInterface $conn)
     {
         $this->clients->attach($conn);
-        echo "New connection: ({$conn->resourceId})\n";
+        echo "New connection! ({$conn->resourceId})\n";
+        echo "Total clients connected: " . count($this->clients) . "\n";
     }
 
     public function onMessage(ConnectionInterface $from, $msg) {
