@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* -----------------CSS RESET ---------------------*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* -----------------MAIN STYLES ------------------*/
+:root {
+  --main-bg-color: #e4c7c7;
+  --components-color: #3e3d3d;
+  --accent: #abd5ec;
+  --main-font: "Work Sans", sans-serif;
+}
+
+html {
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font);
+}
+
+main {
+  max-width: 1500px;
+  flex-grow: 1;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* -------------------- TOP NAV -------------------*/
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--components-color);
+  padding: 14px;
+}
+
+.top-nav-element {
+  list-style: none;
+}
+.top-nav-element a {
+  color: white;
+  text-decoration: none;
+}
+.top-nav-element a:hover {
+  color: var(--accent);
+}
+
+/*# sourceMappingURL=styles.css.map */
