@@ -12,14 +12,21 @@
 <body>
 <div class="wrapper">
     <header>
-        <?php include_once  __DIR__  . '/../src/views/components/header.php' ?>
+        <?php include_once __DIR__ . '/../src/views/components/header.php' ?>
     </header>
-    <h1>Welcome to this chat app!</h1>
-    <input type="text" id="messageInput" placeholder="Type a message...">
-    <button onclick="sendMessage()">Send</button>
-    <div id="messages"></div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Welcome to this chat app!</h1>
+        </div>
+        <div class="chat-box" id="messages"></div>
+        <div id="connectStatus"></div>
+        <div class="chat-input">
+            <button id="connectButton">Connect</button>
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
     <footer></footer>
 </div>
-
 </body>
 </html>

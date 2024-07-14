@@ -1,74 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 /* -----------------CSS RESET ---------------------*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+
 input, button, textarea, select {
   font: inherit;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
 #root, #__next {
   isolation: isolate;
 }
 
 /* -----------------MAIN STYLES ------------------*/
-
-:root{
-  //colors
+:root {
   --main-bg-color: #e4c7c7;
   --components-color: #3e3d3d;
   --accent: #abd5ec;
-
-  //fonts
   --main-font: "Work Sans", sans-serif;
 }
 
-
-html{
+html {
   background-color: var(--main-bg-color);
   font-family: var(--main-font);
 }
 
-main{
+main {
   max-width: 1500px;
   flex-grow: 1;
 }
-#wrapper{
+
+.wrapper {
+  width: 100%;
+  max-width: 500px; /* Reduced max-width */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 70vh; /* Reduced height */
 }
-/* -------------------- TOP NAV -------------------*/
 
-.top-nav{
+/* -------------------- TOP NAV -------------------*/
+.top-nav {
   display: flex;
   justify-content: center;
   gap: 16px;
   background-color: var(--components-color);
-  padding: 14px;
+  padding: 10px; /* Reduced padding */
 }
-.top-nav-element{
+
+.top-nav-element {
   list-style: none;
-  a{
-    color: white;
-    text-decoration: none;
-  }
-  a:hover{
-    color: var(--accent);
-  }
+}
+.top-nav-element a {
+  color: white;
+  text-decoration: none;
+}
+.top-nav-element a:hover {
+  color: var(--accent);
+}
+
+#connectStatus{
+  opacity: 50%;
+}
+
+/* -------------------- Chatbox -------------------*/
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-header {
+  background-color: #4800f1;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #b6b6b6;
+}
+
+.chat-input {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.chat-input button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4800f1;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.message.self {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  text-align: right;
+}
+.message.received {
+  background-color: #add8e6;
+  align-self: flex-srgb(2, 142, 189);
+  text-align: left;
 }
